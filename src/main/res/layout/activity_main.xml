@@ -87,7 +87,8 @@
                 android:id="@+id/textInputPrix"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text = "@={article.prix + ``}"/>
+                android:inputType="numberDecimal"
+                android:text="@={article.prix + ``}" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -103,7 +104,8 @@
                 android:id="@+id/textInputSortieinitiale"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text = "@{article.dateSortie + ``}" />
+                android:inputType="date"
+                android:text="@{android.text.format.DateFormat.format(`dd/MM/yyyy`, article.dateSortie.time)}" />
         </com.google.android.material.textfield.TextInputLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

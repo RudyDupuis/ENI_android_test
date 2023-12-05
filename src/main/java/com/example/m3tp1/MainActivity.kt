@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
 
                 val snackbar = Snackbar.make(
                     binding.root,
-                    "Vous venez de créer ${currentArticle.titre} vendu pour un montant de ${currentArticle.prix}",
+                    "Vous venez de créer ${currentArticle.titre} vendu pour un montant de ${currentArticle.prix}€",
                     Snackbar.LENGTH_LONG
                 )
                 snackbar.show()
