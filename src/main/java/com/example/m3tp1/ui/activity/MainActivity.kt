@@ -1,8 +1,7 @@
-package com.example.m3tp1
+package com.example.m3tp1.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import com.example.m3tp1.bo.Article
 import com.example.m3tp1.databinding.ActivityMainBinding
 import com.example.m3tp1.repository.ArticleRepository

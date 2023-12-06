@@ -1,4 +1,4 @@
-package com.example.m3tp1
+package com.example.m3tp1.ui.fragments
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.navigation.fragment.findNavController
+import com.example.m3tp1.R
 import com.example.m3tp1.repository.ArticleRepository
 
 class ListArticleFragment : Fragment() {
