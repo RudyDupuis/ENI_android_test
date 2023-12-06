@@ -11,6 +11,10 @@ class ArticleDAOMemoryImpl : ArticleDAO {
         Article(3L, "pomme", "une super pomme", 1.5, "", Date()),
     )
 
+    override fun selectAll(): MutableList<Article> {
+        return articlesInMemory
+    }
+
     override fun selectById(id: Long): Article {
         return articlesInMemory.find { it.id == id } ?: throw NoSuchElementException("Article not found")
     }

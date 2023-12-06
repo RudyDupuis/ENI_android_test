@@ -9,6 +9,10 @@ object ArticleRepository {
     private val articleDAOMemory : ArticleDAO = DAOFactory.createArticleDAO(DAOType.MEMORY)
     private val articleDAONetwork : ArticleDAO = DAOFactory.createArticleDAO(DAOType.NETWORK)
 
+    fun getAllArticle() : MutableList<Article> {
+        return articleDAOMemory.selectAll()
+    }
+
     fun getArticle(id : Long) : Article {
         return articleDAOMemory.selectById(id)
     }
