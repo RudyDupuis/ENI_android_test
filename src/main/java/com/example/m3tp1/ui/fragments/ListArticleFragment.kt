@@ -14,7 +14,6 @@ import com.example.m3tp1.repository.ArticleRepository
 
 class ListArticleFragment : Fragment() {
 
-    @SuppressLint("MissingInflatedId")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -29,9 +28,11 @@ class ListArticleFragment : Fragment() {
         val textView = view.findViewById<TextView>(R.id.textViewListArictle)
         textView.text = titles
 
+        val article = ArticleRepository.getArticle(1L)
         val button = view.findViewById<Button>(R.id.buttonListArticle)
         button.setOnClickListener {
-            findNavController().navigate(R.id.action_listArticleFragment_to_detailArticleFragment)
+            val direction = ListArticleFragmentDirections.actionListArticleFragmentToDetailArticleFragment(article)
+            findNavController().navigate(direction)
         }
 
         return view
