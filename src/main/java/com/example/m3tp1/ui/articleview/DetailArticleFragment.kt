@@ -1,4 +1,4 @@
-package com.example.m3tp1.ui.fragments
+package com.example.m3tp1.ui.articleview
 
 import android.content.Intent
 import android.net.Uri

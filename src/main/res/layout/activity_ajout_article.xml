@@ -5,15 +5,15 @@
 
     <data>
         <variable
-            name="article"
-            type="com.example.m3tp1.bo.Article" />
+            name="vm"
+            type="com.example.m3tp1.ui.articleadd.AjoutArticleViewModel" />
 
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.activity.AjoutArticleActivity">
+        tools:context=".ui.articleadd.AjoutArticleActivity">
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline"
@@ -53,7 +53,7 @@
                 android:id="@+id/textInputTitre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text = "@={article.titre}" />
+                android:text = "@={vm.article.titre}" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -70,7 +70,7 @@
                 android:id="@+id/TextInputDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text = "@={article.description}" />
+                android:text = "@={vm.article.description}" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -88,7 +88,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal"
-                android:text="@={article.prix + ``}" />
+                android:text="@={vm.article.prix + ``}" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -105,7 +105,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="date"
-                android:text="@{android.text.format.DateFormat.format(`dd/MM/yyyy`, article.dateSortie.time)}" />
+                android:text="@{android.text.format.DateFormat.format(`dd/MM/yyyy`, vm.article.dateSortie.time)}" />
         </com.google.android.material.textfield.TextInputLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,9 +1,10 @@
-package com.example.m3tp1.ui.activity
+package com.example.m3tp1.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.m3tp1.R
+import com.example.m3tp1.ui.articleadd.AjoutArticleActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 
@@ -23,7 +24,7 @@ class HomeActivity : AppCompatActivity() {
 
         val buttonExplicit = findViewById<FloatingActionButton>(R.id.floatingActionButtonAjoutArticle)
         buttonExplicit.setOnClickListener {
-            Intent(this,AjoutArticleActivity::class.java).apply {
+            Intent(this, AjoutArticleActivity::class.java).apply {
                 startActivity(this)
             }
         }
